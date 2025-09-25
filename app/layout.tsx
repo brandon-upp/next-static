@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
   title: "Next.js on GitHub Pages",
   description: "A Next.js web application on GitHub Pages",
 };
+
+const myFont = localFont({
+  src: [
+    {
+      path: '../public/fonts/GT-Eesti-Display-Thin.woff',
+      weight: '350',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/GT-Eesti-Display-Bold-Italic.woff',
+      weight: '900',
+      style: 'italic'
+    }
+  ]
+})
 
 export default function RootLayout({
   children,
@@ -15,7 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={myFont.className}>
+          {children}
+        </body>
     </html>
   );
 }
