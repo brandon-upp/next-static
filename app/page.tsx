@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -6,6 +7,9 @@ export default function Home() {
       <p style={{paddingTop: '100px', paddingBottom: '100px', margin: 0, fontSize: '9.375rem', textAlign: 'center', fontWeight: 350, maxWidth: '3315px'}}>
         Take a deep dive into <span style={{fontWeight: 900, fontStyle: 'italic'}}>Duvor</span> (communal cloth) and <span style={{fontWeight: 900, fontStyle: 'italic'}}>The Miraculous Draught of Fishes</span> (tapestry)
       </p>
+      <Typography sx={{py: '100px', margin: 0, fontSize: '9.375rem', textAlign: 'center', fontWeight: 350, maxWidth: '3315px', fontFamily: 'inherit'}}>
+        Take a deep dive into <span style={{fontWeight: 900, fontStyle: 'italic'}}>Duvor</span> (communal cloth) and <span style={{fontWeight: 900, fontStyle: 'italic'}}>The Miraculous Draught of Fishes</span> (tapestry)
+      </Typography>
       <div style={{display: 'flex', gap: '200px'}}>
         <Image
           src='/next-static/Process_People_card.jpg'
